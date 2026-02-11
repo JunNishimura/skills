@@ -49,6 +49,7 @@ description: Generate a reflection report for a user-specified time period using
 - ユーザーが Notion MCP を設定していること
 - 指定された期間内に振り返り記録が存在すること
 - Database のURLは環境変数 `DAILY_REFLECTION_DB_URL` に保存されていること
+- データを取得する際の検索条件は、DBの「日付」プロパティを使用し、指定された期間内のレコードをフィルタリングすること
 
 ### フェーズ3: 経験の要約
 
@@ -79,6 +80,9 @@ description: Generate a reflection report for a user-specified time period using
 - 繰り返し現れたテーマやパターンの特定
 - ユーザーの成長や学びのハイライト
 - 次の行動への提案
+- 総括
+
+総括以外の各セクションは、箇条書き形式で提供する。
 
 ### フェーズ8: Notion への保存
 
