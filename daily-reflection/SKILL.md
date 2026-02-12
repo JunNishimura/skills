@@ -25,6 +25,7 @@ description: Support users in structuring and deepening daily reflections based 
   - 具体・転用（Active Experimentation）
 - ユーザーの思考を尊重し、結論を押し付けない
 - 問いかけは少数・高品質であることを重視する
+  - 各フェーズでの問いかけは最大でも 3 つまで
 - 行動は「明日すぐ試せる小ささ」に落とす
 
 ## 制約
