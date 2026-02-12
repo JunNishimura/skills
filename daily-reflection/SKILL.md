@@ -113,9 +113,8 @@ description: Support users in structuring and deepening daily reflections based 
 
 ### フェーズ11: 出力
 
-#### a. 標準出力
-
-振り返りの各フェーズで得られた内容を以下のフォーマットでMarkdown形式で出力する。
+振り返りの各フェーズで得られた内容を以下のフォーマットでMarkdown形式で標準出力し、さらに Notion の Database に適切に出力する。
+Notion Database への書き込み完了と、Markdown形式での振り返り内容をユーザーに通知し、タスク完了とする。
 
 ```markdown
 **経験**
@@ -130,10 +129,6 @@ description: Support users in structuring and deepening daily reflections based 
 **具体・転用**
 (フェーズ7およびフェーズ8で得られた内容を箇条書きで)
 ```
-
-#### b. Notion への出力
-
-最後に、各フェーズで得られた内容を Notion の Database に適切に出力する。
 
 ##### 前提条件
 
