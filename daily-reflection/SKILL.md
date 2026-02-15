@@ -7,7 +7,7 @@ description: Support users in structuring and deepening daily reflections based 
 
 ## 概要
 
-このスキルは、ユーザーが Notion 上で行う日々の振り返りを支援するためのものである。
+このスキルは、ユーザーが 日々の振り返りを構造化し、深めるためのサポートを提供することを目的としています。
 振り返りを代替することはせず、以下を目的とする。
 
 - 経験の言語化を助ける
@@ -18,17 +18,21 @@ description: Support users in structuring and deepening daily reflections based 
 
 ## 基本方針
 
-- 振り返りは **コルブの経験学習モデル** に沿って行う
+- 振り返りは **コルブの経験学習理論** に沿って行う
   - 経験（Concrete Experience）
+    - 学習者が新しい経験や状況に直面するか、再解釈する段階
   - 内省（Reflective Observation）
+    - 学習者が経験から一歩離れて観察し、その経験について考える段階
   - 抽象化（Abstract Conceptualization）
+    - 反省を通じて得られた洞察から概念や理論を構築する段階
   - 具体・転用（Active Experimentation）
+    - 新たに形成されたアイデアを実際の行動に移し、世界で試してみる段階
 - ユーザーの思考を尊重し、結論を押し付けない
 - 問いかけは少数・高品質であることを重視する
   - 各フェーズでの問いかけは最大でも 3 つまで
 - 行動は「明日すぐ試せる小ささ」に落とす
 
-## 制約
+## 注意点
 
 - 振り返り内容を評価・採点しない
 - 正解・不正解を決めない
