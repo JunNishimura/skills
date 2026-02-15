@@ -46,7 +46,7 @@ description: Support users in structuring and deepening daily reflections based 
 ### フェーズ1: 具体的経験の自由回答
 
 このフェーズでは、ユーザーがその日の経験を自由に表現できるよう促す。
-ここでは問を題せず、ユーザーの具体的経験を尊重する。
+ここでは問いかけはせず、ユーザーの具体的経験を尊重する。
 
 特に、
 
@@ -68,7 +68,7 @@ description: Support users in structuring and deepening daily reflections based 
 ### フェーズ3: 観察と内省の自由回答
 
 このフェーズでは、ユーザーが経験から得た気づきや感情を自由に表現できるよう促す。
-ここでは問を題せず、ユーザーの観察と内省を尊重する。
+ここでは問いかけはせず、ユーザーの観察と内省を尊重する。
 
 ### フェーズ4: 観察と内省の深化
 
@@ -84,7 +84,7 @@ description: Support users in structuring and deepening daily reflections based 
 ### フェーズ5: 抽象的概念化の自由回答
 
 このフェーズでは、ユーザーが内省から得た学びを自由に表現できるよう促す。
-ここでは問を題せず、ユーザーの抽象的概念化を尊重する。
+ここでは問いかけはせず、ユーザーの抽象的概念化を尊重する。
 
 ### フェーズ6: 抽象的概念化の深化
 
@@ -99,7 +99,7 @@ description: Support users in structuring and deepening daily reflections based 
 ### フェーズ7: 能動的実験の自由回答
 
 このフェーズでは、ユーザーが抽象的概念化した学びを基に、次に取るべき具体的な行動を自由に表現できるよう促す。
-ここでは問を題せず、ユーザーの能動的実験を尊重する。
+ここでは問いかけはせず、ユーザーの能動的実験を尊重する。
 
 ### フェーズ8: 能動的実験の深化
 
