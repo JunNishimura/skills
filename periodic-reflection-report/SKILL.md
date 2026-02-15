@@ -1,6 +1,6 @@
 ---
 name: periodic-reflection-report
-description: Generate a reflection report for a user-specified time period using daily reflection records in Notion; summarize experiences, themes, growth, and propose next actions, then optionally save to Notion via MCP.
+description: Generate a reflection report for a user-specified time period using daily reflection records in Notion; summarize experiences, themes, growth, and check execution of proactive experiments, then optionally save to Notion via MCP.
 ---
 
 # 定期振り返りレポート作成スキル
@@ -14,7 +14,7 @@ description: Generate a reflection report for a user-specified time period using
 - 期間中の主な経験の要約
 - 繰り返し現れたテーマやパターンの特定
 - ユーザーの成長や学びのハイライト
-- 次の行動への提案
+- 能動的実験の実行確認
 
 また、生成されたレポートを MCP を通じて Notion に保存する。
 
@@ -22,7 +22,7 @@ description: Generate a reflection report for a user-specified time period using
 
 - 振り返りレポートはユーザーの自己理解と成長を促進するものである
 - ユーザーの振り返り内容を尊重し、客観的かつ建設的にまとめる
-- 提案される次の行動は具体的で実行可能なものである
+- 日々の振り返りで挙がった能動的実験の実行状況を、具体的に確認できる形で示す
 - レポートは明確で読みやすい形式で提供する
 
 ## 注意点
@@ -66,10 +66,12 @@ description: Generate a reflection report for a user-specified time period using
 このフェーズでは、ユーザーの振り返り内容から成長や学びのハイライトを抽出する。
 ユーザーがどのように変化し、何を学んだかを明確に示す。
 
-### フェーズ6: 次の行動への提案
+### フェーズ6: 能動的実験の実行確認
 
-このフェーズでは、ユーザーの成長や学びに基づいて、次に取るべき具体的な行動を提案する。
-提案は具体的で実行可能なものであり、ユーザーが次のステップを踏み出すのに役立つものである
+このフェーズでは、日々の振り返りで挙がった能動的実験をいくつかピックアップし、
+期間内に実行へ移せているかを確認する。
+
+実行確認は、ユーザーが能動的に確認できるようチェックボックス形式で記述する。
 
 ### フェーズ7: レポートの生成
 
@@ -79,10 +81,12 @@ description: Generate a reflection report for a user-specified time period using
 - 期間中の主な経験の要約
 - 繰り返し現れたテーマやパターンの特定
 - ユーザーの成長や学びのハイライト
-- 次の行動への提案
+- 能動的実験の実行確認
 - 総括
 
-総括以外の各セクションは、箇条書き形式で提供する。階層構造を用いて関連する内容を整理することで、ユーザーが理解しやすいようにする。
+総括以外の各セクションは、箇条書き形式で提供する。  
+ただし「能動的実験の実行確認」セクションはチェックボックス形式（`- [ ]` / `- [x]`）で提供する。  
+必要に応じて階層構造を用いて関連する内容を整理し、ユーザーが理解しやすいようにする。
 
 ### フェーズ8: Notion への保存
 
