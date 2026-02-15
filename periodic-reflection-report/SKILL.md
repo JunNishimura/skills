@@ -13,6 +13,7 @@ description: Generate a reflection report for a user-specified time period using
 
 - 期間中の主な経験の要約
 - 繰り返し現れたテーマやパターンの特定
+- 日々の感情の移り変わりの分析
 - ユーザーの成長や学びのハイライト
 - 次の行動への提案
 
@@ -61,30 +62,66 @@ description: Generate a reflection report for a user-specified time period using
 このフェーズでは、振り返りデータを分析し、繰り返し現れたテーマやパターンを特定する。
 ユーザーの行動や感情の傾向を把握し、重要なポイントを明らかにする。
 
-### フェーズ5: 成長と学びのハイライト
+### フェーズ5: 感情分析（時系列）
+
+このフェーズでは、Notion から取得した日々の振り返りデータをもとに感情分析を実施し、日々の感情の移り変わりを分析する。
+
+#### 手順
+
+1. 期間内の日次データから次の形式の入力 JSON を作成する。
+
+```json
+{
+  "records": [
+    {
+      "date": "2026-01-05",
+      "experience": "...",
+      "reflection": "...",
+      "abstraction": "...",
+      "next_action": "..."
+    }
+  ]
+}
+```
+
+2. 次のコマンドで感情分析を実施する。
+
+```bash
+python periodic-reflection-report/scripts/analyze_emotion_timeline.py --in <emotion_input.json> --outdir periodic-reflection-report/scripts/out
+```
+
+3. `periodic-reflection-report/scripts/out/emotion_timeline.json` から以下を読み取り、レポートへ反映する。
+   - 平均感情スコア（`average_sentiment`）
+   - ポジティブ/ニュートラル/ネガティブの日数（`label_counts`）
+   - 感情トレンド（`trend`: `improving` / `stable` / `declining`）
+   - よく現れた感情（`most_common_emotions`）
+   - 日次の推移（`timeline`）
+
+### フェーズ6: 成長と学びのハイライト
 
 このフェーズでは、ユーザーの振り返り内容から成長や学びのハイライトを抽出する。
 ユーザーがどのように変化し、何を学んだかを明確に示す。
 
-### フェーズ6: 次の行動への提案
+### フェーズ7: 次の行動への提案
 
 このフェーズでは、ユーザーの成長や学びに基づいて、次に取るべき具体的な行動を提案する。
 提案は具体的で実行可能なものであり、ユーザーが次のステップを踏み出すのに役立つものである
 
-### フェーズ7: レポートの生成
+### フェーズ8: レポートの生成
 
 このフェーズでは、前のフェーズで得られた情報をもとに、振り返りレポートを生成する。
 レポートは以下のセクションで構成される。
 
 - 期間中の主な経験の要約
 - 繰り返し現れたテーマやパターンの特定
+- 感情分析（時系列）
 - ユーザーの成長や学びのハイライト
 - 次の行動への提案
 - 総括
 
 総括以外の各セクションは、箇条書き形式で提供する。
 
-### フェーズ8: Notion への保存
+### フェーズ9: Notion への保存
 
 このフェーズでは、生成された振り返りレポートを Notion の指定されたページ配下に新しいページとして保存する。
 
