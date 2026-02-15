@@ -30,6 +30,7 @@ description: Support users in structuring and deepening daily reflections based 
 - ユーザーの思考を尊重し、結論を押し付けない
 - 問いかけは少数・高品質であることを重視する
   - 各フェーズでの問いかけは最大でも 3 つまで
+- ○○の深化フェーズでの問いかけに対してユーザーは全て答える必要はない
 - 行動は「明日すぐ試せる小ささ」に落とす
 
 ## 注意点
@@ -47,6 +48,13 @@ description: Support users in structuring and deepening daily reflections based 
 このフェーズでは、ユーザーがその日の経験を自由に表現できるよう促す。
 ここでは問を題せず、ユーザーの経験を尊重する。
 
+特に、
+
+- 新しい経験や状況に直面したこと
+- 想定外の出来事や感情が生じたこと
+
+などを表現することを促す。
+
 ### フェーズ2: 経験の深化
 
 経験の深化フェーズでは、ユーザーの経験を深めるための問いを提示する。
@@ -60,7 +68,6 @@ description: Support users in structuring and deepening daily reflections based 
 ### フェーズ3: 内省の自由回答
 
 このフェーズでは、ユーザーが経験から得た気づきや感情を自由に表現できるよう促す。
-
 ここでは問を題せず、ユーザーの内省を尊重する。
 
 ### フェーズ4: 内省の深化
@@ -70,6 +77,7 @@ description: Support users in structuring and deepening daily reflections based 
 
 - 新しい視点や角度からの問い
 - 感情や思考の背景に迫る問い
+- 反対の立場や異なる解釈を促す問い
 
 を提供する。
 
