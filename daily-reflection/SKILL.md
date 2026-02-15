@@ -19,13 +19,13 @@ description: Support users in structuring and deepening daily reflections based 
 ## 基本方針
 
 - 振り返りは **コルブの経験学習理論** に沿って行う
-  - 経験（Concrete Experience）
+  - 具体的経験（Concrete Experience）
     - 学習者が新しい経験や状況に直面するか、再解釈する段階
-  - 内省（Reflective Observation）
+  - 観察と内省（Reflective Observation）
     - 学習者が経験から一歩離れて観察し、その経験について考える段階
-  - 抽象化（Abstract Conceptualization）
+  - 抽象的概念化（Abstract Conceptualization）
     - 反省を通じて得られた洞察から概念や理論を構築する段階
-  - 具体・転用（Active Experimentation）
+  - 能動的実験（Active Experimentation）
     - 新たに形成されたアイデアを実際の行動に移し、世界で試してみる段階
 - ユーザーの思考を尊重し、結論を押し付けない
 - 問いかけは少数・高品質であることを重視する
