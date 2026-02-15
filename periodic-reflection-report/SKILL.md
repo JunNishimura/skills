@@ -54,7 +54,7 @@ description: Generate a reflection report for a user-specified time period using
 ### フェーズ3: 経験の要約
 
 このフェーズでは、収集した振り返りデータから、期間中の主な経験を要約する。
-各日の振り返り内容を分析し、共通するテーマや重要な出来事を抽出する。
+新しい経験や予想外な経験の有無を確認し、ユーザーが新しい挑戦をしたかどうかを把握する。
 
 ### フェーズ4: テーマとパターンの特定
 
@@ -82,7 +82,7 @@ description: Generate a reflection report for a user-specified time period using
 - 次の行動への提案
 - 総括
 
-総括以外の各セクションは、箇条書き形式で提供する。
+総括以外の各セクションは、箇条書き形式で提供する。階層構造を用いて関連する内容を整理することで、ユーザーが理解しやすいようにする。
 
 ### フェーズ8: Notion への保存
 
