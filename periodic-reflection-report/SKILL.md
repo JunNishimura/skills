@@ -25,7 +25,7 @@ description: Generate a reflection report for a user-specified time period using
 - 提案される次の行動は具体的で実行可能なものである
 - レポートは明確で読みやすい形式で提供する
 
-## 制約
+## 注意点
 
 - ユーザーの振り返り内容を評価・採点しない
 - 正解・不正解を決めない
