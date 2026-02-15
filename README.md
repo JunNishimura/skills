@@ -26,4 +26,4 @@
 - 振り返り系スキルは Notion MCP 連携を前提にした手順を含みます。
 - 想定される主な環境変数:
   - `DAILY_REFLECTION_DB_URL`
-  - `PERIODIC_REFLECTION_PAGE_URL`
+  - `PERIODIC_REFLECTION_PAGE_ID`
