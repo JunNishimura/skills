@@ -91,6 +91,6 @@ description: Generate a reflection report for a user-specified time period using
 #### 条件
 
 - ユーザーは Notion MCP を設定している
-- 親となるページの URL は環境変数 `PERIODIC_REFLECTION_PAGE_URL` に格納されている
+- 親となるページの ページID は環境変数 `PERIODIC_REFLECTION_PAGE_ID` に格納されている
 - レポートは Markdown 形式で保存される
 - タイトルは「振り返りレポート: YYYY年MM月DD日 - YYYY年MM月DD日」の形式とする
