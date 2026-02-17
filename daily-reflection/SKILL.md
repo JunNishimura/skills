@@ -65,6 +65,8 @@ description: Support users in structuring and deepening daily reflections based 
 
 を提供する。
 
+観察と内省、抽象的概念化、能動的実験に関連する問いかけはこのフェーズではしないようにする。あくまで具体的経験の深化に集中する。
+
 ### フェーズ3: 観察と内省の自由回答
 
 このフェーズでは、ユーザーが経験から得た気づきや感情を自由に表現できるよう促す。
@@ -81,6 +83,8 @@ description: Support users in structuring and deepening daily reflections based 
 
 を提供する。
 
+抽象的概念化や能動的実験に関連する問いかけはこのフェーズではしないようにする。あくまで観察と内省の深化に集中する。
+
 ### フェーズ5: 抽象的概念化の自由回答
 
 このフェーズでは、ユーザーが内省から得た学びを自由に表現できるよう促す。
@@ -95,6 +99,8 @@ description: Support users in structuring and deepening daily reflections based 
 - 他の状況や文脈での適用可能性を探る問い
 
 を提供する。
+
+能動的実験での振り返りに関連する問いかけはこのフェーズではしないようにする。あくまで抽象的概念化の深化に集中する。
 
 ### フェーズ7: 能動的実験の自由回答
 
