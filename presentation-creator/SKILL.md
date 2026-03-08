@@ -200,13 +200,30 @@ paginate: true
 
 出力先ディレクトリに `assets/` ディレクトリを作成し、このスキルの `assets/footer.png` をコピーする。
 また、スライドに対応する `assets/style.css` を作成し、トンマナ（配色・フォントなど）を記述する。
+さらに、出力先ディレクトリに VSCode ワークスペース設定ファイル（拡張子 `.code-workspace`）を作成し、`markdown.marp.themes` に `./assets/style.css` を設定する。
 
 ```
 <出力先>/
 ├── <ファイル名>.md
+├── <任意の名前>.code-workspace
 └── assets/
     ├── style.css
     └── footer.png
+```
+
+`.code-workspace` ファイル内容の例:
+
+```json
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "markdown.marp.themes": ["./assets/style.css"]
+  }
+}
 ```
 
 #### 完了通知
@@ -214,6 +231,7 @@ paginate: true
 ファイルの出力が完了したら、以下をユーザーに通知する。
 
 - 出力した Markdown ファイルのパス
+- 出力した `.code-workspace` ファイルのパス
 - `assets/footer.png` のコピー先パス
 - `assets/style.css` の出力先パス
 - VSCode で出力ディレクトリをワークスペースとして開く案内
