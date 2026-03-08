@@ -28,6 +28,7 @@ description: Create a Marp-based presentation in Markdown format from user-provi
 - ユーザーの意図した内容を勝手に変更・削除しない
 - トンマナの質問はまとめて一度に行い、ユーザーの負担を最小限にする
 - フェーズは順番に実行する
+- `assets/style.css` を Markdown から参照する運用のため、VSCode では出力ディレクトリをワークスペースとして開く前提で進める
 
 ## フェーズ構成
 
@@ -74,26 +75,36 @@ URLパスに16進カラーコードが含まれる場合（例: `/palette/222831
 ```yaml
 ---
 marp: true
-theme: [フェーズ2 の回答に基づいて選択: default / gaia / uncover]
+theme: [フェーズ2 の回答に基づくテーマ名（例: custom）]
 paginate: true
-style: |
-  section {
-    font-family: [フェーズ2 の回答に基づいてフォントスタックを指定];
-    background-color: [フェーズ2 の回答に基づいて背景色を指定];
-    color: [フェーズ2 の回答に基づいてテキスト色を指定];
-  }
-  .footer-image {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    height: 36px;
-    width: auto;
-  }
 ---
 ```
 
-Color Hunt のURLが指定されている場合は、`style` 内の `background-color` と `color` を抽出した配色から決定する。
+スタイル定義（フォント、背景色、文字色、`.footer-image` など）は Markdown ファイルに直接書かず、`assets/style.css` に記述する。
+`assets/style.css` は Marp のカスタムテーマとして作成し、先頭に `/* @theme custom */` のようなテーマ宣言を入れる。
+
+Color Hunt のURLが指定されている場合は、`assets/style.css` 内の `background-color` と `color` を抽出した配色から決定する。
 明るい背景には暗い文字色、暗い背景には明るい文字色を選び、必要に応じて強調色も同じパレットから使う。
+
+`assets/style.css` の例:
+
+```css
+/* @theme custom */
+
+section {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.footer-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 36px;
+  width: auto;
+}
+```
 
 #### スライド構成のルール
 
@@ -129,21 +140,8 @@ Color Hunt のURLが指定されている場合は、`style` 内の `background-
 ```markdown
 ---
 marp: true
-theme: default
+theme: custom
 paginate: true
-style: |
-  section {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
-  }
-  .footer-image {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    height: 36px;
-    width: auto;
-  }
 ---
 
 # プレゼンタイトル
@@ -191,6 +189,7 @@ style: |
 #### 出力先の決定
 
 ユーザーに出力先のパスを尋ねる。指定がない場合はカレントディレクトリに出力する。
+出力後は、その出力ディレクトリを VSCode でワークスペースとして開く前提とする。
 
 #### ファイル名のルール
 
@@ -200,11 +199,13 @@ style: |
 #### assets のコピー
 
 出力先ディレクトリに `assets/` ディレクトリを作成し、このスキルの `assets/footer.png` をコピーする。
+また、スライドに対応する `assets/style.css` を作成し、トンマナ（配色・フォントなど）を記述する。
 
 ```
 <出力先>/
 ├── <ファイル名>.md
 └── assets/
+    ├── style.css
     └── footer.png
 ```
 
@@ -214,12 +215,14 @@ style: |
 
 - 出力した Markdown ファイルのパス
 - `assets/footer.png` のコピー先パス
+- `assets/style.css` の出力先パス
+- VSCode で出力ディレクトリをワークスペースとして開く案内
 - Marp でスライドに変換するためのコマンド例
 
 ```bash
 # Marp CLI を使用して HTML に変換する場合
-npx @marp-team/marp-cli <ファイル名>.md --html
+npx @marp-team/marp-cli <ファイル名>.md --html --theme-set ./assets/style.css
 
 # PDF に変換する場合
-npx @marp-team/marp-cli <ファイル名>.md --pdf
+npx @marp-team/marp-cli <ファイル名>.md --pdf --theme-set ./assets/style.css
 ```
