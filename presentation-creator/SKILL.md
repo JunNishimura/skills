@@ -82,6 +82,7 @@ paginate: true
 
 スタイル定義（フォント、背景色、文字色、`.footer-image` など）は Markdown ファイルに直接書かず、`assets/style.css` に記述する。
 `assets/style.css` は Marp のカスタムテーマとして作成し、先頭に `/* @theme custom */` のようなテーマ宣言を入れる。
+`presentation-creator/assets/base.css` の汎用スタイルを、生成する `assets/style.css` にコピーして流用する。
 
 Color Hunt のURLが指定されている場合は、`assets/style.css` 内の `background-color` と `color` を抽出した配色から決定する。
 明るい背景には暗い文字色、暗い背景には明るい文字色を選び、必要に応じて強調色も同じパレットから使う。
@@ -109,6 +110,11 @@ section {
 #### スライド構成のルール
 
 - タイトルスライドを必ず最初に置く
+- 各セクションの開始前に、セクション切り替わり用スライドを1枚入れる
+- セクション切り替わり用スライドは以下を満たす
+  - 単一の背景色で他スライドとのコントラストを強調する
+  - スライド中央に次のセクション名のみを配置する
+  - Marp のクラス指定（例: `<!-- _class: section-divider -->`）で表現する
 - スライドの区切りは `---` を使用する
 - 各スライドの右下にフッター画像を表示するために、スライドの末尾（`---` の直前）に以下の HTML を挿入する
 
@@ -124,6 +130,7 @@ section {
 - 各スライドのタイトルは `#` で記述する
 - 本文は箇条書き（`-`）を基本とする
 - 1 スライドの箇条書きは最大 5 項目程度に抑える
+- セクション切り替わり用スライドは、本文を入れずにセクション名のみ記載する
 - コードを示す場合はコードブロックを使用する
 - トンマナに合わせた絵文字の使用は任意とする
 - 図解・比較・時系列・プロセス説明など、画像があると理解しやすい箇所は画像を入れる前提でスライドを設計する
@@ -157,6 +164,14 @@ paginate: true
 - トピック 1
 - トピック 2
 - トピック 3
+
+<img src="./assets/footer.png" class="footer-image" alt="footer" />
+
+---
+
+<!-- _class: section-divider -->
+
+# トピック 1
 
 <img src="./assets/footer.png" class="footer-image" alt="footer" />
 
@@ -199,7 +214,8 @@ paginate: true
 #### assets のコピー
 
 出力先ディレクトリに `assets/` ディレクトリを作成し、このスキルの `assets/footer.png` をコピーする。
-また、スライドに対応する `assets/style.css` を作成し、トンマナ（配色・フォントなど）を記述する。
+さらに、スライドに対応する `assets/style.css` を作成し、トンマナ（配色・フォントなど）を記述する。
+このとき、スキルの `assets/base.css` の内容を `assets/style.css` にコピーして、セクション切り替わり用スタイル（`.section-divider`）を利用可能にする。
 さらに、出力先ディレクトリに VSCode ワークスペース設定ファイル（拡張子 `.code-workspace`）を作成し、`markdown.marp.themes` に `./assets/style.css` を設定する。
 
 ```
