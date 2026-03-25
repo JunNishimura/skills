@@ -1,0 +1,24 @@
+/* Reusable styles for presentation-creator outputs */
+
+/* Section divider slide:
+   - single color background
+   - centered section title */
+section.section-divider {
+  background: var(--section-divider-bg, #334155);
+  color: var(--section-divider-text, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 72px;
+}
+
+section.section-divider h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-size: 2.2em;
+  font-weight: 700;
+  line-height: 1.25;
+}
